@@ -2,6 +2,10 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from 'react-icons/si';
 import { BsInfoCircle } from 'react-icons/bs';
 import { Loader } from './';
+import React, { useContext } from "react";
+import { TransactionContext } from "../context/TransactionContext";
+import { shortenAddress } from "../utils/shortenAddress";
+
 
 const commonStyles="min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-white";
 
@@ -16,7 +20,11 @@ const Input = ({placeholder,name,type,value,handleChange})=>(
     />
 )
 const Welcome = () => {
+  
     const connectWallet=()=>{
+
+    }
+    const handleSubmit=()=>{
 
     }
     return (
@@ -74,7 +82,7 @@ const Welcome = () => {
                     <Input placeholder="Keyword (Gif)" name="keyword" type="text"/>
                     <Input placeholder="Enter Message" name="message" type="text"/>
                     <div className="h-[1px] w-full bg-gray-50"/>
-                    {/* {false ?(
+                    {false ?(
                         <Loader/>
                     ):(
                         <button
@@ -84,7 +92,7 @@ const Welcome = () => {
                         >send Now</button>
                     )
 
-                    } */}
+                    }
                 </div>
             </div>
             </div>
